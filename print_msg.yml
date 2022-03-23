@@ -1,0 +1,5 @@
+---
+ - hosts: servers
+   tasks:
+   - debug: msg="welcome to playbook"
+
