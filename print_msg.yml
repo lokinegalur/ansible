@@ -1,10 +1,10 @@
 ---
  - name: This is a simple play to understand debug module 
-   hosts: servers
+   hosts: all
    tasks:
    - name: "Print a Simple msg"
      debug:
        msg:
         - "welcome to play book"
         - "Hi demo sede"
-        - "3rd msg"
+        - "3rd msg: {{message}}"

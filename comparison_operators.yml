@@ -1,0 +1,16 @@
+---
+ - name: 'working with comparison op'
+   hosts: all
+   gather_facts: false
+   vars:
+     x: 6
+     y: 10
+   tasks:
+    - debug: 
+        msg:
+         - "x={{x}}"
+         - "y={{y}}"
+         - "x == y: {{x==y}}"
+         - "x != y: {{x!=y}}"
+         - "x < y: {{x<y}}"
+         - "x > y: {{x>y}}"
