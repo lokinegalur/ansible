@@ -3,11 +3,7 @@
    hosts: all
    become: yes
    tasks:
-    - name: "installing httpd"
+    - name: "installing {{pkg}}"
       yum: 
-        name: httpd
-        state: present
-    - name: "uninstalling httpd"
-      yum:
-        name: httpd
-        state: absent
+        name: "{{pkg}}"
+        state: "{{reg_state}}"
