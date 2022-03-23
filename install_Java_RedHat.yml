@@ -1,5 +1,5 @@
 ---
- - name: "Install tree"
+ - name: "Install open-jdk"
    yum:
-     name: tree
+     name: java-1.8.0-openjdk
      state: present
