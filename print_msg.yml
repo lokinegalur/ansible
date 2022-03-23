@@ -1,5 +1,10 @@
 ---
- - hosts: servers
+ - name: This is a simple play to understand debug module 
+   hosts: servers
    tasks:
-   - debug: msg="welcome to playbook"
-
+   - name: "Print a Simple msg"
+     debug:
+       msg:
+        - "welcome to play book"
+        - "Hi demo sede"
+        - "3rd msg"
