@@ -1,0 +1,12 @@
+---
+ - name: "install java and webserver on redhat"
+   hosts: web_servers
+   gather_facts: true
+   become: yes
+   tasks:
+     - name: "Install web_server"
+       import_tasks: /etc/ansible/install_WebServer_RedHAt.yml
+       when: ansible_os_family=="RedHat"
+     - name: "Install Java"
+       import_tasks: install_Java_RedHat.yml
+       when: ansible_os_family=="RedHat"
