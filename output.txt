@@ -1,0 +1,20 @@
+ansadmin@lohith-K53SM:/etc/ansible$ ansible-playbook print_msg.yml
+
+PLAY [servers] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Platform linux on host 3.110.142.53 is using the discovered Python
+interpreter at /usr/bin/python3.7, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.12/reference_appendices/interpreter_discovery.html for more information.
+ok: [3.110.142.53]
+
+TASK [debug] *******************************************************************
+ok: [3.110.142.53] => {
+    "msg": "welcome to playbook"
+}
+
+PLAY RECAP *********************************************************************
+3.110.142.53               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
