@@ -1,0 +1,13 @@
+---
+ - name: "Install and uninstall httpd"
+   hosts: all
+   become: yes
+   tasks:
+    - name: "installing httpd"
+      yum: 
+        name: httpd
+        state: present
+    - name: "uninstalling httpd"
+      yum:
+        name: httpd
+        state: absent

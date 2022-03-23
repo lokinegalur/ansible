@@ -1,7 +1,14 @@
 ---
- - name: "Working with cmd_line args"
+ - name: "comand line args"
    hosts: all
-   vars:
    gather_facts: false
+   vars:
+     x: 5
+     y: 6
    tasks:
-      - debug: var=x
+     - name: "work with debug module"
+       debug:
+          msg: 
+           - "The x value is: {{x}}"
+           - "The y value is: {{y}}"
+     
